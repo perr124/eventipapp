@@ -1,0 +1,37 @@
+<ion-menu [content]="nav">
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="bckColor">
+        <ion-list inset no-lines>
+            <button color="dark" 
+                ion-item
+                icon-left
+                (click)="onLoad(contactPage)"
+                *ngIf="isAuthenticated">
+                <ion-icon name="ios-cloud-upload-outline"></ion-icon>
+                Post Up
+            </button>
+            <button color="dark"
+                ion-item
+                icon-left
+                (click)="onLoad(termsPage)"
+                *ngIf="isAuthenticated">
+                <ion-icon name="md-book"></ion-icon>
+                Terms of Service
+            </button>
+            <button color="dark"
+                ion-item
+                icon-left
+                (click)="onLogout()">
+                <ion-icon name="log-out"
+                *ngIf="isAuthenticated"></ion-icon>
+                Logout
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>

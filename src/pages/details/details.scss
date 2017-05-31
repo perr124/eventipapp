@@ -1,0 +1,82 @@
+page-details {
+  .card-background-page {
+  margin-top: -15px;
+  
+  
+
+  .topImage {
+    position: relative;
+    text-align: center;
+  }
+
+  .crop {
+    // width: 500px;
+    height: 370px;
+    overflow: hidden;
+}
+
+.crop img {
+    // width: 400px;
+    // height: 400px;
+    margin: 10px  0 -18px;
+    // margin: auto;
+}
+
+
+  .card-title {
+    position: absolute;
+    top: 75%;
+    text-align: left;
+    font-size: 1.3em;
+    width: 100%;
+    font-weight: bold;
+    color: #D0D0D0;
+  }
+
+    .card-title2 {
+    position: absolute;
+    top: 87%;
+    text-align: left;
+    font-size: 0.8em;
+    width: 100%;
+    font-weight: bold;
+    color: #B0B0B0  ;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+}
+.verticalLine {
+  border-left: thick solid #ff0000;
+}
+
+//   @media screen 
+// and (min-device-width : 330px)  {
+//   .iphone5 {
+//     margin-top: -100px;
+//   }
+//    }
+@media screen and (max-width: 320px) {
+    .iphone5 {
+    margin-top: -45px;
+  }
+}
+
+.address {
+  font-size: 0.65em; 
+  top: -25px; 
+  right: -25px; 
+  position: relative;
+  @media screen and (min-width: 768px) {
+    top: -18px;
+}
+}
+}
+
+

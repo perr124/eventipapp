@@ -1,0 +1,62 @@
+<!--
+  Generated template for the Contact page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="shareButton()">
+        <ion-icon name="ios-share-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <div class="topImage">
+    <!--<div><ion-icon [name]="visible ? 'ios-heart' : 'ios-heart-outline'" style="margin-top: 15px; right: 10px; font-size: 3.80em; color: red; position: absolute; z-index:999999 !important;" (click)="addToFavs(event)"></ion-icon></div>-->
+    
+    <!--<div><ion-icon [name]="visible ? 'ios-heart' : 'ios-heart-outline'" style="margin-top: 15px; right: 10px; font-size: 3.80em; color: red; position: absolute; z-index:999999 !important;" [click]="visible ? 'addToFavs(event)' : 'rmveFrmFavs(event)'"></ion-icon></div>-->
+    
+    
+    <div>
+    <ion-icon name="ios-heart-outline" style="margin-top: 15px; right: 10px; font-size: 3.80em; color: red; position: absolute; z-index:999999 !important;" (click)="addToFavs(event)" *ngIf="!isFavorite(event)"></ion-icon>
+    <ion-icon name="ios-heart" style="margin-top: 15px; right: 10px; font-size: 3.80em; color: red; position: absolute; z-index:999999 !important;" (click)="rmveFrmFavs(event)" *ngIf="isFavorite(event)"></ion-icon>
+    </div>
+    
+    <div class="crop">
+    <img src={{event.imageUrl}} imageViewer/>
+    </div>
+    </div>
+    <!--<div style="margin-top: 10px;">-->
+    <ion-grid class="iphone5">
+    <ion-row>
+      <ion-col>
+        <div><ion-icon name="ios-home" style=" margin-left: 0px; font-size: 2.00em; color: #505050; "> </ion-icon></div>
+        <div class="address"><a button href="http://maps.google.com/?q={{event.address}}" style="text-decoration: none; color: #505050;">{{event.address}}</a></div>
+      </ion-col>
+      <ion-col style="right: -25px;">
+        <div><ion-icon name="md-calendar" style=" margin-left: 10px; font-size: 2.00em; color: #505050; "> </ion-icon></div>
+        <div style="font-size: 0.65em; top: -18px; right: -35px; position: relative;">{{event.date}}</div>
+      </ion-col>
+      <ion-col style="right: -10px;">
+        <div><ion-icon name="call" style=" margin-left: 10px; font-size: 2.00em; color: #505050; "> </ion-icon></div>
+        <div style="font-size: 0.65em; top: -18px; right: -35px; position: relative;"><a button href="tel:{{event.contact}}" style="text-decoration: none; color: #505050;">{{event.contact}}</a></div>
+      </ion-col>
+    </ion-row>
+    <div style="margin-top: -25px;">
+      <hr>
+    </div>
+    <ion-row style="font-size: 0.80em; margin-left: 6px;">{{event.description}}</ion-row>
+    </ion-grid>
+    <!--<hr>-->
+</ion-content>
+ 
